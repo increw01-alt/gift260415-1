@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://moneyplan.kr/sitemap.xml
+Sitemap: https://gift-260415-18995717-515d4.web.app/sitemap.xml
+Sitemap: https://gift260415-1.pages.dev/sitemap.xml
