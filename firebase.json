@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "GEMINI.md",
+      "README.md",
+      "상담신청-클로드제작.md"
+    ]
+  }
+}

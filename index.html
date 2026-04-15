@@ -601,56 +601,106 @@
     }
     .cta-section h2 { font-size: 24px; font-weight: 800; color: #fff; margin-bottom: 8px; line-height: 1.4; }
     .cta-section .cta-sub { font-size: 15px; color: rgba(255,255,255,0.65); margin-bottom: 32px; }
-    .form-card {
-      background: #ffffff; border-radius: 24px;
-      padding: 32px 28px; text-align: left;
-      max-width: 480px; margin: 0 auto;
+    /* ===== CTA Card ===== */
+    .cta-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 36px 28px 32px;
+      text-align: center;
+      max-width: 420px;
+      margin: 0 auto;
       box-shadow: 0 8px 30px rgba(0,0,0,0.12);
     }
-    .form-card h3 { font-size: 18px; font-weight: 800; color: #1B2A4A; text-align: center; margin-bottom: 4px; }
-    .form-card .form-note { font-size: 13px; color: #94A3B8; text-align: center; margin-bottom: 22px; }
-    .form-group { margin-bottom: 16px; }
-    .form-group label { display: block; font-size: 13px; font-weight: 700; color: #334155; margin-bottom: 6px; }
-    .form-group label .req { color: #EF4444; margin-left: 2px; }
-    .form-group input, .form-group select, .form-group textarea {
-      width: 100%; padding: 14px 16px; border: 1px solid #E2E8F0;
-      border-radius: 12px; font-size: 15px; color: #1a1a1a;
-      background: #F8FAFC; outline: none; transition: border-color 0.2s;
-      font-family: inherit;
+    .cta-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 18px;
     }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-      border-color: #3B82F6; background: #ffffff;
+    .cta-badge {
+      display: inline-block;
+      background: #EFF6FF;
+      color: #3B82F6;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 20px;
     }
-    .form-group textarea { resize: vertical; min-height: 80px; }
-    .form-consent { display: flex; align-items: flex-start; gap: 8px; margin: 18px 0 22px; }
-    .form-consent input[type="checkbox"] { width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; accent-color: #3B82F6; }
-    .form-consent label { font-size: 12px; color: #94A3B8; line-height: 1.5; }
-    .btn-submit {
-      width: 100%; background: #3B82F6; color: #fff;
-      font-size: 17px; font-weight: 700; padding: 16px;
-      border-radius: 14px; border: none; cursor: pointer;
-      transition: all 0.2s; box-shadow: 0 4px 14px rgba(59,130,246,0.3);
+    .cta-card-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #1B2A4A;
+      margin-bottom: 24px;
+      line-height: 1.3;
     }
-    .btn-submit:hover { background: #2563EB; transform: translateY(-1px); }
-    .form-result { display: none; text-align: center; padding: 30px 20px; }
-    .form-result .check-icon {
-      width: 64px; height: 64px; border-radius: 50%;
-      background: #DCFCE7; color: #22C55E; font-size: 30px;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 16px;
+    .cta-card-title em {
+      font-style: normal;
+      color: #3B82F6;
     }
-    .form-result h3 { font-size: 18px; font-weight: 800; color: #1B2A4A; margin-bottom: 6px; }
-    .form-result p { font-size: 14px; color: #64748B; }
-    .contact-btns { display: flex; gap: 10px; margin-top: 20px; }
-    .contact-btn {
-      flex: 1; display: flex; align-items: center; justify-content: center;
-      gap: 8px; padding: 14px 10px; border-radius: 14px;
-      text-decoration: none; font-size: 14px; font-weight: 700;
+    .cta-benefit-list {
+      list-style: none;
+      margin: 0 0 28px;
+      padding: 0;
+    }
+    .cta-benefit-list li {
+      font-size: 16px;
+      font-weight: 600;
+      color: #334155;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .cta-benefit-list li + li {
+      border-top: 1px solid #F1F5F9;
+    }
+    .cta-check {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px; height: 24px;
+      background: #DCFCE7;
+      color: #22C55E;
+      border-radius: 50%;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .cta-channel-btn {
+      display: block;
+      background: #3B82F6;
+      color: #ffffff;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 16px 20px;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: all 0.2s;
+      box-shadow: 0 4px 14px rgba(59,130,246,0.3);
+      margin-bottom: 10px;
+    }
+    .cta-channel-btn:hover {
+      background: #2563EB;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(59,130,246,0.4);
+    }
+    .cta-phone-btn {
+      display: block;
+      background: #1B2A4A;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 20px;
+      border-radius: 14px;
+      text-decoration: none;
       transition: all 0.2s;
     }
-    .contact-btn:hover { opacity: 0.85; transform: translateY(-1px); }
-    .contact-btn.phone { background: #1B2A4A; color: #fff; }
-    .contact-btn.channel { background: #3B5BDB; color: #fff; }
+    .cta-phone-btn:hover {
+      background: #253a5e;
+      transform: translateY(-1px);
+    }
 
     /* ===== Floating CTA ===== */
     .floating-cta {
@@ -783,7 +833,7 @@
 
       .cta-section { padding: 64px 40px 110px; }
       .cta-section h2 { font-size: 28px; }
-      .form-card { padding: 36px 32px; }
+      .cta-card { padding: 40px 36px 36px; }
 
       .floating-cta { padding: 14px 40px; }
       .footer { padding: 32px 40px 100px; }
@@ -843,13 +893,9 @@
     </div>
     <div class="hero-logos">
       <div class="logo-pill">
-        <span style="color:#fff; font-size:15px; font-weight:800; letter-spacing:-0.5px;">MoneyPlan</span>
+        <span style="color:#fff; font-size:16px; font-weight:800; letter-spacing:-0.5px;">MoneyPlan</span>
         <span class="lp-div"></span>
-        <img src="로고모음/한국상품권협회1.png" alt="한국상품권협회" style="filter:brightness(0) invert(1); height:16px;" />
-        <span class="lp-div"></span>
-        <img src="로고모음/레드핀.png" alt="레드핀" style="filter:brightness(0) invert(1); height:14px;" />
-        <span class="lp-div"></span>
-        <img src="로고모음/핑딜로고 1.png" alt="핑딜" style="filter:brightness(0) invert(1); height:15px;" />
+        <span style="color:rgba(255,255,255,0.6); font-size:12px; font-weight:600;">한국상품권협회 인증</span>
       </div>
     </div>
     <h1><em>현금</em>이 필요한 순간,<br/>가장 빠른 솔루션</h1>
@@ -864,15 +910,12 @@
     <div class="tb-logos">
       <div class="tl-card">
         <img src="로고모음/한국상품권협회1.png" alt="한국상품권협회" />
-        <span>한국상품권협회</span>
       </div>
       <div class="tl-card">
         <img src="로고모음/레드핀.png" alt="레드핀" />
-        <span>레드핀</span>
       </div>
       <div class="tl-card">
         <img src="로고모음/핑딜로고 1.png" alt="핑딜" />
-        <span>핑딜</span>
       </div>
     </div>
   </div>
@@ -1203,55 +1246,27 @@
     </div>
   </section>
 
-  <!-- ====== CTA + Form ====== -->
+  <!-- ====== CTA ====== -->
   <section class="cta-section" id="consult-form">
     <h2>현금이 필요하시다면<br/>지금 바로 상담하세요</h2>
     <p class="cta-sub">무료 상담 · 비밀 보장 · 진행 의무 없음</p>
-    <div class="form-card">
-      <div id="formArea">
-        <h3>머니플랜 무료 상담</h3>
-        <p class="form-note">30초면 끝, 상담사가 직접 연락드립니다</p>
-        <form id="consultForm" onsubmit="submitForm(event)">
-          <div class="form-group">
-            <label>이름 <span class="req">*</span></label>
-            <input type="text" placeholder="이름을 입력해주세요" required />
-          </div>
-          <div class="form-group">
-            <label>연락처 <span class="req">*</span></label>
-            <input type="tel" placeholder="010-0000-0000" required />
-          </div>
-          <div class="form-group">
-            <label>필요 금액대</label>
-            <select>
-              <option value="">선택해주세요</option>
-              <option>50만 원 이하</option>
-              <option>50만 ~ 100만 원</option>
-              <option>100만 ~ 300만 원</option>
-              <option>300만 ~ 500만 원</option>
-              <option>500만 원 이상</option>
-              <option>상담 후 결정</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>문의 내용</label>
-            <textarea placeholder="상황을 간단히 적어주시면 더 빠른 상담이 가능합니다" rows="3"></textarea>
-          </div>
-          <div class="form-consent">
-            <input type="checkbox" id="consent" required />
-            <label for="consent">개인정보 수집 및 이용에 동의합니다. 수집된 정보는 상담 목적으로만 사용되며, 상담 완료 후 즉시 파기됩니다.</label>
-          </div>
-          <button type="submit" class="btn-submit">무료 상담 신청하기</button>
-        </form>
+    <div class="cta-card">
+      <div class="cta-card-header">
+        <span class="cta-badge">신용카드 OK</span>
+        <span class="cta-badge">소액결제 OK</span>
       </div>
-      <div class="form-result" id="formResult">
-        <div class="check-icon">✓</div>
-        <h3>상담 신청이 완료되었습니다!</h3>
-        <p>전문 상담사가 빠르게 연락드리겠습니다.<br/>감사합니다.</p>
-      </div>
-      <div class="contact-btns">
-        <a href="tel:1800-2434" class="contact-btn phone">📞 1800-2434</a>
-        <a href="https://koreagiftcard.channel.io/home?page=신규1" target="_blank" class="contact-btn channel">💬 채널톡 바로 상담</a>
-      </div>
+      <h3 class="cta-card-title">상품권 <em>구매 + 판매</em></h3>
+      <ul class="cta-benefit-list">
+        <li><span class="cta-check">&#10003;</span>신청 즉시 확인</li>
+        <li><span class="cta-check">&#10003;</span>5분 이내 입금</li>
+        <li><span class="cta-check">&#10003;</span>무이자 할부 가능</li>
+      </ul>
+      <a href="https://koreagiftcard.channel.io/home?page=신규1" target="_blank" class="cta-channel-btn">
+        채널톡 실시간 상담 바로가기 &rsaquo;
+      </a>
+      <a href="tel:1800-2434" class="cta-phone-btn">
+        📞 전화 상담 1800-2434
+      </a>
     </div>
   </section>
 
@@ -1375,13 +1390,6 @@
     document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('active'));
     document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('show'));
     if (!isOpen) { btn.classList.add('active'); answer.classList.add('show'); }
-  }
-  function submitForm(e) {
-    e.preventDefault();
-    document.getElementById('formArea').querySelector('form').style.display = 'none';
-    document.getElementById('formArea').querySelector('h3').style.display = 'none';
-    document.getElementById('formArea').querySelector('.form-note').style.display = 'none';
-    document.getElementById('formResult').style.display = 'block';
   }
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
