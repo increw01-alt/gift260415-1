@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://xn--zf0b677a35e9vj85a47j.com/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://xn--zf0b677a35e9vj85a47j.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xn--zf0b677a35e9vj85a47j.com/" />
+    <image:image>
+      <image:loc>https://xn--zf0b677a35e9vj85a47j.com/images/hero-card.png</image:loc>
+      <image:title>머니플랜 상품권 현금화 서비스</image:title>
+      <image:caption>신용카드로 상품권 할부 구입 후 현금 전환 - 한국상품권협회 인증</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://xn--zf0b677a35e9vj85a47j.com/images/kgca-logo.png</image:loc>
+      <image:title>한국상품권협회 공식 인증 로고</image:title>
+      <image:caption>상품권 유통 업체 신뢰성 검증 단체 - 한국상품권협회</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://xn--zf0b677a35e9vj85a47j.com/images/redpin-logo.png</image:loc>
+      <image:title>레드핀 로고</image:title>
+      <image:caption>상품권 매입 공식 제휴 파트너 - 레드핀</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://xn--zf0b677a35e9vj85a47j.com/images/pingdeal-logo.png</image:loc>
+      <image:title>핑딜 로고</image:title>
+      <image:caption>상품권 현금화 공식 제휴 파트너 - 핑딜</image:caption>
+    </image:image>
   </url>
 </urlset>

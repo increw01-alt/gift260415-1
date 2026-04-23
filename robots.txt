@@ -1,4 +1,34 @@
+# robots.txt for 머니플랜 MoneyPlan
+# https://xn--zf0b677a35e9vj85a47j.com/
+
+# 모든 검색엔진 크롤러 허용
 User-agent: *
 Allow: /
+Disallow: /.firebase/
+Disallow: /.git/
+Disallow: /.vscode/
 
+# Google 검색엔진
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# 네이버 검색엔진 (Yeti)
+User-agent: Yeti
+Allow: /
+
+User-agent: NaverBot
+Allow: /
+
+# 다음 검색엔진
+User-agent: Daumoa
+Allow: /
+
+# 빙 검색엔진
+User-agent: Bingbot
+Allow: /
+
+# 사이트맵 위치
 Sitemap: https://xn--zf0b677a35e9vj85a47j.com/sitemap.xml
