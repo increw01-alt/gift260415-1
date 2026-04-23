@@ -1,2 +1,4 @@
 .firebase/
 .wrangler/
+.claude/
+.vscode/
