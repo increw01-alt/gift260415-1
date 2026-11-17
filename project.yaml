@@ -10,23 +10,23 @@ brand:
   name: "머니플랜"           # 화면에 쓰는 브랜드명
   domain: "상품권재테크.com"         # 대표 도메인. 한글 도메인은 원형 그대로 적는다
   phone: "1800-2434"          # 대표번호
-  consult_url: "#consult-form"    # 상담 링크 (채널톡 등). CTA 가 가리켜야 하는 주소
+  consult_url: "/contact/"    # 상담 링크 (채널톡 등). CTA 가 가리켜야 하는 주소
 
 site:
   type: static       # static | vite | next | astro
-  root: "."          # HTML 소스가 있는 폴더 (프로젝트 루트 기준)
-  build_command: ""
-  output_dir: ""
+  root: "public"          # HTML 소스가 있는 폴더 (프로젝트 루트 기준)
+  build_command: "npm run build"
+  output_dir: "public"
 
 deploy:
-  provider: firebase-hosting
+  provider: cloudflare-pages
   production_branch: main   # 이 브랜치로 push 하면 실제 배포된다
 
 analytics:           # 이 사이트에 실제로 쓰는 ID 만. 없으면 비워 둔다
   gtm_id: "GTM-K52V6QRJ"
-  ga4_id: "G-34052F1CDF"
+  ga4_id: "G-3H052F1CDF"
   ads_id: "AW-17762127179"
   pixel_id: "1683722935954617"
 
 modes:
-  rigor: minimal     # minimal | standard | full  (.claude/docs/rigor-modes.md)
+  rigor: full     # minimal | standard | full  (.claude/docs/rigor-modes.md)

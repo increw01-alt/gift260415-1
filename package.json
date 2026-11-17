@@ -1,0 +1,21 @@
+{
+  "name": "moneyplan-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "머니플랜 — 휴대폰결제·소액결제 상품권 구입 문의 안내 사이트 (정적 HTML + Tailwind CLI + Cloudflare Pages Functions + D1)",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-pages.mjs && tailwindcss -i src/app.css -o public/css/app.css --minify",
+    "watch": "tailwindcss -i src/app.css -o public/css/app.css --watch",
+    "dev": "wrangler pages dev public --port 8791",
+    "test": "node --test",
+    "check": "python3 .claude/scripts/site-check.py",
+    "db:local": "wrangler d1 execute DB --local --file=schema.sql",
+    "db:remote": "wrangler d1 execute DB --remote --file=schema.sql"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "tailwindcss": "^4.3.5",
+    "wrangler": "^4.163.0"
+  }
+}

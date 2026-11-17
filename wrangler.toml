@@ -1,0 +1,18 @@
+name = "gift260415-1"
+pages_build_output_dir = "public"
+compatibility_date = "2026-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+# D1 바인딩. 2026-11-17 `wrangler d1 create moneyplan-inquiries` 로 생성(APAC). 원격 스키마 적용 완료(npm run db:remote).
+# 로컬(`npm run dev`)은 이 값과 무관하게 .wrangler/ 아래의 로컬 SQLite 를 쓴다.
+[[d1_databases]]
+binding = "DB"
+database_name = "moneyplan-inquiries"
+database_id = "ac3cd479-5cea-439e-8c44-bac6f4eeddb8"
+
+# 비밀이 아닌 설정값. 비밀값은 `npx wrangler pages secret put <이름> --project-name moneyplan-site` 로 넣는다.
+[vars]
+SITE_URL = "https://xn--zf0b677a35e9vj85a47j.com"
+# 문의 빈도 제한: 같은 발신자(IP 해시)당 창(초) 안의 최대 건수
+RATE_LIMIT_WINDOW_SEC = "600"
+RATE_LIMIT_MAX = "5"

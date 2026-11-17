@@ -1,0 +1,20 @@
+<!-- 데스크톱 우측 퀵바: 전화 · 채팅 상담(채널톡) · 문의. 모바일에서는 하단 바가 같은 역할을 한다. -->
+<aside class="quickbar" aria-label="빠른 문의">
+  <a href="tel:{{phone}}" class="qb-phone" data-cta="quick_phone" aria-label="전화 {{phone}}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.8 2.1a2 2 0 0 1 2 1.7l.6 4a2 2 0 0 1-1.1 2.1l-1.9 1a12 12 0 0 0 5.7 5.7l1-1.9a2 2 0 0 1 2.1-1.1l4 .6a2 2 0 0 1 1.7 2v3.4a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2 4.3 2 2 0 0 1 4 2.1Z"/></svg>
+    <span>전화</span>
+  </a>
+  <a href="{{channel_url}}" target="_blank" rel="noopener" class="qb-chat" data-cta="quick_chat" data-channel-link>
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+    <span>채팅 상담</span>
+  </a>
+  <a href="/contact/" class="qb-form" data-cta="quick_form" data-contact-link>
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+    <span>문의 폼</span>
+  </a>
+</aside>
+<!-- 768~1279px: 퀵바 대신 우측 하단 단일 문의 버튼 -->
+<a href="{{channel_url}}" target="_blank" rel="noopener" class="floating-btn" data-cta="floating_contact" data-channel-link>
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+  문의하기
+</a>

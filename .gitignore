@@ -1,7 +1,8 @@
-.firebase/
-.wrangler/
-.vscode/
-.claude/settings.local.json
 production/session-logs/
 .env
+node_modules/
+.wrangler/
+.dev.vars
+public/css/app.css
+public/js/validate.js
 _보관/

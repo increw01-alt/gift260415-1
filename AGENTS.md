@@ -47,3 +47,15 @@ python3 .claude/scripts/site-check.py
 - 
 ```
 실행하지 않은 검증을 실행한 것처럼 쓰지 않는다. 확인하지 못한 것은 "확인 못 함"으로 적는다.
+
+## 이 프로젝트의 명령과 구조 (머니플랜 신규 사이트)
+- 명령: `npm run build` (조립 + Tailwind) → `npm test` (node --test) → `npm run db:local` (로컬 D1 스키마) → `npm run dev` (http://localhost:8791) → `npm run check` (정적 점검)
+- 구조와 문의 흐름: `docs/design.md`. 기획서: `production/briefs/2026-11-17-moneyplan-new-site.md`
+- 페이지는 `src/pages/` 를 고친다. `public/*.html` 은 빌드가 덮어쓰므로 직접 고치지 않는다. 공통 조각은 `src/partials/`
+- 브랜드 값은 `project.yaml` 과 `src/site.json` 만 쓴다. 모르는 값은 `[확인 필요: 항목]` 플레이스홀더로 둔다
+- 건드리면 안 되는 파일: `project.yaml`, `.claude/**`, `production/**`, `wrangler.toml` 의 `database_id`, `src/site.json` 의 값, `schema.sql` (지시문에 포함된 경우만)
+- 비밀값은 코드·HTML·커밋 메시지에 넣지 않는다. `context.env.<이름>` 으로만 참조하고 이름 목록은 `.dev.vars.example` 에 적는다
+- 작업 브랜치 `work/new-site` 에 로컬 커밋까지만 한다. push, 배포(`wrangler pages deploy`), 원격 D1 작업은 하지 않는다
+- 문구: 한국어, 이모지 없음. 쓰지 않는 말 — 협회, 공식, 인증, 승인, 제휴, 기관, 현금화, 환전, 수수료 없음, 100%, 즉시 한도, 누구나 가능, 보장. 근거 없는 수치·후기 없음
+- 폼: 주민등록번호, 카드·계좌 번호, 휴대폰 확인 번호, 결제 비밀번호를 묻거나 저장하지 않는다. 개인정보 수집·이용 동의 없이는 제출되지 않는다
+- 테스트는 외부 의존성 없이 `node --test` 로 돈다. 실행하지 않은 테스트를 통과했다고 쓰지 않는다

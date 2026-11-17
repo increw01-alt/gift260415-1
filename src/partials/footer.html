@@ -1,0 +1,37 @@
+<footer class="bg-navy-950 text-white/70">
+  <div class="mx-auto w-full max-w-6xl px-5 py-14 text-sm">
+    <div class="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div>
+        <p class="text-xl font-extrabold tracking-tight text-white">{{site_name}}</p>
+        <p class="mt-3 leading-relaxed">휴대폰결제·소액결제 상품권 구입 문의 안내.<br>구입 가능 여부와 준비할 사항을 확인한 뒤 진행하도록 돕습니다.</p>
+        <a href="tel:{{phone}}" class="mt-5 inline-flex items-center gap-2 text-2xl font-extrabold tracking-tight text-white" data-cta="footer_phone">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.8 2.1a2 2 0 0 1 2 1.7l.6 4a2 2 0 0 1-1.1 2.1l-1.9 1a12 12 0 0 0 5.7 5.7l1-1.9a2 2 0 0 1 2.1-1.1l4 .6a2 2 0 0 1 1.7 2v3.4a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2 4.3 2 2 0 0 1 4 2.1Z"/></svg>
+          {{phone}}
+        </a>
+        <p class="mt-1 text-white/50">채팅 상담·문의 폼 {{chat_hours}} · 전화 {{hours}}</p>
+      </div>
+      <nav aria-label="바닥글 메뉴" class="grid grid-cols-2 gap-x-6 gap-y-3 md:grid-cols-1">
+        <a href="/guide/" class="py-1 hover:text-white">구입 안내</a>
+        <a href="/mobile-payment/" class="py-1 hover:text-white">휴대폰결제·소액결제</a>
+        <a href="/how-to/" class="py-1 hover:text-white">이용 안내</a>
+        <a href="/faq/" class="py-1 hover:text-white">자주 묻는 질문</a>
+        <a href="/contact/" class="py-1 hover:text-white">문의하기</a>
+      </nav>
+      <nav aria-label="정책" class="grid gap-y-3">
+        <a href="/privacy/" class="py-1 hover:text-white">개인정보처리방침</a>
+        <a href="/terms/" class="py-1 hover:text-white">이용약관</a>
+      </nav>
+    </div>
+    <!-- 사업자 정보: 값은 src/site.json. 확인 필요 항목은 플레이스홀더 그대로 둔다. -->
+    <dl class="mt-12 grid grid-cols-1 gap-x-8 gap-y-1.5 border-t border-white/10 pt-8 text-xs text-white/60 sm:grid-cols-2">
+      <div class="flex gap-2"><dt class="shrink-0 text-white/55">상호</dt><dd>{{biz_company}}</dd></div>
+      <div class="flex gap-2"><dt class="shrink-0 text-white/55">대표자</dt><dd>{{biz_ceo}}</dd></div>
+      <div class="flex gap-2"><dt class="shrink-0 text-white/55">사업자등록번호</dt><dd>{{biz_no}}</dd></div>
+      <!-- 통신판매업 신고번호가 생기면 여기에 행을 추가한다: <div class="flex gap-2"><dt class="shrink-0 text-white/55">통신판매업 신고번호</dt><dd>번호</dd></div> -->
+      <div class="flex gap-2 sm:col-span-2"><dt class="shrink-0 text-white/55">주소</dt><dd>{{biz_address}}</dd></div>
+      <div class="flex gap-2"><dt class="shrink-0 text-white/55">이메일</dt><dd>{{biz_email}}</dd></div>
+      <div class="flex gap-2"><dt class="shrink-0 text-white/55">호스팅 서비스</dt><dd>Cloudflare, Inc.</dd></div>
+    </dl>
+    <p class="mt-6 text-xs text-white/55">© {{site_name}}. 상품권 구입 문의와 안내를 제공합니다.</p>
+  </div>
+</footer>
