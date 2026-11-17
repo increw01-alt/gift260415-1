@@ -1,4 +1,7 @@
 .firebase/
 .wrangler/
-.claude/
 .vscode/
+.claude/settings.local.json
+production/session-logs/
+.env
+_보관/

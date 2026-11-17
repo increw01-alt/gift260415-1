@@ -1,0 +1,24 @@
+# 브랜드 표 — 브랜드 분리 검사가 읽는다. 탭으로 구분한다.
+# key	name	domains(쉼표)	phones(쉼표)
+# project.yaml 의 brand.key 와 같은 줄이 "이 사이트"이고, 나머지 줄의 도메인·번호가
+# 이 사이트 HTML 에 나오면 site-check.py 가 경고로 알려 준다.
+# 한글 도메인은 원형과 퓨니코드를 함께 적는다. 새 브랜드는 줄을 추가하면 된다.
+koreagift	한국상품권협회	koreagift.cc,koreagiftcard.co.kr,kocash.co.kr
+solsolpay	쏠쏠페이	k-pin.co.kr
+moneyplan	머니플랜	상품권재테크.com,xn--zf0b677a35e9vj85a47j.com	1800-2434
+modoosise	모두의시세	modoosise.com
+baekhwa	백화할부	gift-tech.co.kr
+sangtech	상테크	gift-tech.net,상테크.com,xn--hg4bo00agta.com
+kvgift	한국상품권거래소	kv-gift.co.kr
+kvwork	kv-work.co.kr	kv-work.co.kr
+usdt	usdt.io.kr	usdt.io.kr
+plus24	플러스24	plus24.or.kr
+payhope	pay-hope.co.kr	pay-hope.co.kr
+vipvip	vipvip.co.kr	vipvip.co.kr
+creditcard	신용카드.net	신용카드.net,xn--hy1bu9xc1c9rk.net
+coin	coin.ne.kr	coin.ne.kr
+plusto	plusto.co.kr	plusto.co.kr
+bizplusmall	bizplusmall.com	bizplusmall.com
+vip	vip.or.kr	vip.or.kr
+giftinstallment	상품권할부.com	상품권할부.com,xn--zf0bo61amncw13a54a.com
+yeongyangje	영양제.kr	영양제.kr,xn--og5b1hx9c.kr

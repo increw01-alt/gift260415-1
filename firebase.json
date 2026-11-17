@@ -7,7 +7,13 @@
       "**/node_modules/**",
       "GEMINI.md",
       "README.md",
-      "상담신청-클로드제작.md"
+      "상담신청-클로드제작.md",
+      "CLAUDE.md",
+      "AGENTS.md",
+      "PROGRESS.md",
+      "project.yaml",
+      "production/**",
+      "_보관/**"
     ]
   }
 }
