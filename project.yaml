@@ -24,7 +24,7 @@ deploy:
 
 analytics:           # 이 사이트에 실제로 쓰는 ID 만. 없으면 비워 둔다
   gtm_id: "GTM-K52V6QRJ"
-  ga4_id: "G-34052F1CDF"
+  ga4_id: "G-3H052F1CDF"
   ads_id: "AW-17762127179"
   pixel_id: "1683722935954617"
 
