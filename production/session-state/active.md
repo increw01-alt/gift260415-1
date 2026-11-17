@@ -8,13 +8,13 @@
 -->
 
 <!-- CHECKPOINT -->
-**갱신:** 2026-11-17 15:55
-**브랜치:** `work/web-studio-kit` (= main 3a1c63c. 배포 브랜치 main, 원격 github.com/increw01-alt/gift260415-1)
-**지금 하는 일:** /start 온보딩 완료. 키트 설치·설정·헤딩 수정이 main 에 병합·push 됨
-**다음 한 걸음:** 새 작업을 /brief 또는 바로 지시로 시작. 그 작업을 올릴 때 `firebase deploy` 로 이번 변경(h4→h3)도 함께 반영한다(재욱님 결정 2026-11-17, 저장소에 자동 배포 워크플로 없음)
+**갱신:** 2026-11-17 16:20
+**브랜치:** `work/web-studio-kit` (main 과 동일 내용 + 체크포인트·launch.json 커밋)
+**지금 하는 일:** 신규 사이트(휴대폰결제·소액결제 상품권 구입 문의 안내) 1장 기획서와 리다이렉트 표 작성. 재욱님 결정 대기
+**다음 한 걸음:** 결정이 나면 `work/new-site` 브랜치를 만들고 1단계(AGENTS.md 보강, PROGRESS.md, 프로젝트 골격, 설계안) 시작
 **막힌 것:** 없음
-**작업 중 파일:** 없음
-**확인 대기(재욱님):** 없음
+**작업 중 파일:** production/briefs/2026-11-17-moneyplan-new-site.md, 2026-11-17-moneyplan-redirects.md
+**확인 대기(재욱님):** 작업 위치(이 저장소 vs 새 폴더), 호스팅 이전(Firebase → Cloudflare Pages), GA4 ID 표기(G-34052F1CDF vs G-3H052F1CDF), 알림 방식·카카오톡 URL·사업자 정보
 <!-- /CHECKPOINT -->
 
 ## 기록
@@ -24,3 +24,4 @@
 - 2026-11-17: site-check.py 에 stdin/stdout/stderr UTF-8 reconfigure 추가 (윈도우 cp949 콘솔에서 멈추던 문제). 일반·--json·훅 호출 2종 모두 PYTHONUTF8 없이 동작 확인.
 - 2026-11-17: project.yaml analytics 에 GA4 G-34052F1CDF, Ads AW-17762127179, Pixel 1683722935954617 등록(4월 GTM 메모 기준, HTML 에는 GTM 만 있음). index.html 강점 카드 4개 h4→h3, CSS 선택자 동일 변경. site-check 오류 0 · 경고 0 · 참고 4(이미지 크기 미지정 7, 404.html 없음, 사업자 정보 문구 없음, 본문 글자 수).
 - 2026-11-17: work/web-studio-kit 3개 커밋을 main 에 fast-forward 병합 후 origin/main push (2ee551a → 3a1c63c). 참고 4건(이미지 크기, 404.html, 사업자 정보, 글자 수)은 미처리.
+- 2026-11-17: 신규 사이트 지시문 접수. 지시문 전제(기존 사이트 없음, 현재 폴더는 프롬프트 서랍)가 실제와 달라 대조 보고. 기획서·리다이렉트 표 작성.
