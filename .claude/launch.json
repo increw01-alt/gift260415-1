@@ -26,6 +26,20 @@
         "C:/Users/OK/Desktop/블로그이미지/26.11.17 머니플랜 신규사이트/public"
       ],
       "port": 8792
+    },
+    {
+      "name": "asset-browser",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8793",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "C:/Users/OK/Desktop/이미지/06_웹사이트·앱"
+      ],
+      "port": 8793
     }
   ]
 }
