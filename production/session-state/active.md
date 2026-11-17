@@ -8,13 +8,13 @@
 -->
 
 <!-- CHECKPOINT -->
-**갱신:** 2026-11-17 20:10
-**브랜치:** `new-site` (origin gift260415-1. main = 기존 랜딩 + 키트, 실사이트 배포 중)
-**지금 하는 일:** 신규 사이트를 이 저장소로 옮겨 Pages 프로젝트 gift260415-1(Git 연동, main push = 배포)로 교체하는 중. 빌드 설정(npm run build / public) 변경 완료, secret 등록 완료, new-site push → 프리뷰 빌드 대기
-**다음 한 걸음:** 프리뷰(new-site.gift260415-1.pages.dev) 검증 → 재욱님 확인 후 main 병합·push(=실사이트 교체) → 실도메인 확인, 기존 루트 파일 노출 해소 확인, Search Console sitemap 재제출
+**갱신:** 2026-11-17 20:40
+**브랜치:** `new-site` (= main d5726b5, 실사이트 배포본)
+**지금 하는 일:** 출시 완료. 상품권재테크.com 이 새 사이트(Pages gift260415-1, Git 연동)로 교체됨
+**다음 한 걸음:** Search Console sitemap 재제출·네이버 수집 요청(재욱님), GTM 이벤트 발동 확인, www 522 처리, Site Desk 수집 확인. 이후 수정은 새 작업 브랜치에서 하고 main 병합은 재욱님 확인 후
 **막힌 것:** 없음
 **작업 중 파일:** 없음
-**확인 대기(재욱님):** main 병합 시점
+**확인 대기(재욱님):** www 도메인 연결 여부, 스테이징(moneyplan-site) 삭제 여부
 <!-- /CHECKPOINT -->
 
 ## 기록
@@ -24,3 +24,4 @@
 - 2026-11-17: site-check.py 에 stdin/stdout/stderr UTF-8 reconfigure 추가 (윈도우 cp949 콘솔에서 멈추던 문제). 일반·--json·훅 호출 2종 모두 PYTHONUTF8 없이 동작 확인.
 - 2026-11-17: project.yaml analytics 에 GA4 G-34052F1CDF, Ads AW-17762127179, Pixel 1683722935954617 등록(4월 GTM 메모 기준, HTML 에는 GTM 만 있음). index.html 강점 카드 4개 h4→h3, CSS 선택자 동일 변경. site-check 오류 0 · 경고 0 · 참고 4(이미지 크기 미지정 7, 404.html 없음, 사업자 정보 문구 없음, 본문 글자 수).
 - 2026-11-17 저녁: 상품권재테크.com 이 Cloudflare Pages gift260415-1(Git 연동)에서 서빙 중임을 확인(Firebase 아님). 오늘 오후 main push 가 실배포됐고 키트 문서가 루트에 노출됨 → 신규 사이트(26.11.17 머니플랜 신규사이트)를 new-site 브랜치로 옮겨 교체 준비. 방침·약관 확정. Pages 빌드 설정 변경, IP_HASH_SALT 등록.
+- 2026-11-17 20:40: 출시. main d5726b5 → Pages 운영 빌드 → 실도메인 교체 확인. 엣지 캐시에 남은 옛 CLAUDE.md 는 캐시 제거로 정리.

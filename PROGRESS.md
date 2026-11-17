@@ -16,6 +16,7 @@
 | 2026-11-17 | CTA → 채널톡 | 모든 문의 CTA 를 채널톡 채팅 페이지(새 창)로. 문의 폼은 보조 경로(하단 바·퀵바·푸터) |
 | 2026-11-17 | 프리뷰 배포 | https://work-new-site.moneyplan-site-2pu.pages.dev (배포 64da7cd2). 실환경 확인: 페이지·자산 200, 없는 경로 404, 보안 헤더, API 405/400/403, 정상 제출 200 → 원격 D1 id 1 저장(IP 해시). 테스트 행 1건(name 프리뷰테스트)은 운영 배포 전 삭제 예정 |
 | 2026-11-17 | 운영 배포 | work/new-site → main 병합(bfb82d4)·push, `/launch` 점검(오류 0, 분석 코드 유지, 비밀정보 없음), Pages production 배포 824ce6b1 → https://moneyplan-site-2pu.pages.dev 전 페이지 200·API 405/400 확인, 원격 D1 테스트 행 삭제(0건). 도메인은 아직 Firebase |
+| 2026-11-17 | **출시** | new-site → main 병합·push(d5726b5) → Pages 운영 빌드 fdb32530 → 상품권재테크.com 교체. 실도메인 검증: 페이지·빌드 산출물 200, 내부 문서·옛 이미지 404(일부 경로는 엣지 캐시 잔존 → 캐시 제거), 보안 헤더, API 405/400, http→https 301. www 는 522(미연결) |
 
 ## 대기 (재욱님)
 | 항목 | 어디에 쓰이나 | 현재 값 |
@@ -32,7 +33,8 @@
 | 대표 이메일 확인 | 푸터 | www@koreagiftcard.co.kr (협회 사이트 FAQ 기재값) — 머니플랜 수신함으로 맞는지 확인 |
 
 ## 다음 순서
-1. 재욱님: 개인정보처리방침·이용약관의 [확인 필요] 값(보유 기간·환불 규정·보호책임자·시행일 등) 확정 → 팀장 반영 → main 재배포. 도메인 전환 전 필수
-2. 재욱님: Cloudflare 대시보드 → Workers & Pages → moneyplan-site → Custom domains → Set up a custom domain → `xn--zf0b677a35e9vj85a47j.com`(상품권재테크.com) 추가. 존이 같은 계정의 Cloudflare DNS(arely/konnor.ns.cloudflare.com)라 CNAME 이 자동 생성됨. 기존 Firebase 용 A/CNAME 레코드가 있으면 바꿔야 함
-3. 전환 직후: 실도메인 접속·폼 1건 테스트, Firebase 호스팅 비활성, Search Console sitemap 재제출, GTM 미리보기로 cta_click·inquiry_submit·channeltalk_open 확인, Site Desk 수집 확인
-4. 이후 변경은 work/new-site 에서 작업 → main 병합 → `npx wrangler pages deploy public --project-name moneyplan-site --branch main` (재욱님 확인 후)
+1. 출시 후 확인: Search Console 에 https://xn--zf0b677a35e9vj85a47j.com/sitemap.xml 재제출(재욱님), 네이버 서치어드바이저 수집 요청, GTM 미리보기로 cta_click·inquiry_submit·channeltalk_open 발동 확인, Site Desk 다음 수집본에서 GA4·GSC 정상 확인
+2. www.상품권재테크.com 이 522 → Pages 커스텀 도메인에 www 추가하거나 리다이렉트 규칙(재욱님 확인 후)
+3. 운영 D1 문의 확인 방법: `npx wrangler d1 execute DB --remote --command "SELECT * FROM inquiries ORDER BY id DESC LIMIT 20"` (알림 미구현). 월 1회 보유 기간 지난 행 정리
+4. 이후 변경은 새 작업 브랜치 → main 병합 → 자동 배포. main push = 실배포이므로 항상 재욱님 확인 후
+5. moneyplan-site 저장소·Pages 프로젝트(스테이징)는 필요 없으면 삭제
