@@ -23,6 +23,15 @@ import sys
 from html.parser import HTMLParser
 from urllib.parse import urlparse, unquote
 
+# Windows 콘솔(cp949)에서도 한글·특수문자 때문에 멈추지 않도록 입출력을 UTF-8 로 맞춘다.
+# 훅이 표준 입력으로 넘기는 파일 목록(한글 경로)도 같은 이유로 UTF-8 로 읽는다.
+for _stream in (sys.stdin, sys.stdout, sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        try:
+            _stream.reconfigure(encoding="utf-8", errors="replace")
+        except (ValueError, AttributeError):
+            pass
+
 SKIP_DIRS = {
     ".git", "node_modules", ".claude", "production", ".wrangler", ".next",
     ".astro", ".cache", "_보관", "_중복파일", "__pycache__", ".venv", "venv",
