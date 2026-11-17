@@ -25,16 +25,22 @@
 | 통신판매업 신고번호 | 푸터 | 재욱님: 없음 → 행 자체를 뺌(2026-11-17). 생기면 footer.html 주석 자리에 추가 |
 | 문의 알림 수신 방식 | `functions/lib/notify.js` (미작성) | 없음 |
 | 로고 원본 | 헤더 | 회색 네모 자리 |
-| GA4 ID | project.yaml | 확정 G-3H052F1CDF (Site Desk 등록값) |
 | 도메인 연결(상품권재테크.com → Pages) | 출시 | Pages 프로젝트에 커스텀 도메인 추가 후 DNS 전환. Firebase 비활성은 그 직후 |
 | og-image.png | 공유 미리보기 | 자사 카드 일러스트로 합성해 넣음. 사진형으로 바꾸려면 docs/image-prompts.md |
-| GA4 ID | project.yaml | **확정 G-3H052F1CDF** (속성 533182408, Site Desk config/sites.json 2026-11-17 확인). GTM 트리거는 기존 이름 유지 |
+| GTM 버전 게시 승인 | GA4 데이터 수신 | GTM-K52V6QRJ 의 태그 3개(GA4 - Configuration·qualify_lead·close_convert_lead)가 존재하지 않는 G-34052F1CDF 로 보내고 있어 작업공간에서 G-3H052F1CDF 로 수정·저장함(2026-11-17). **제출(게시)은 재욱님 확인 뒤**. 게시 전까지 GA4 속성 533182408 은 데이터 0 |
 | 환불 규정, 보유 기간 확정 | mobile-payment·faq·contact 주석 자리, privacy | 플레이스홀더 |
 | 대표 이메일 확인 | 푸터 | www@koreagiftcard.co.kr (협회 사이트 FAQ 기재값) — 머니플랜 수신함으로 맞는지 확인 |
 
 ## 다음 순서
-1. 출시 후 확인: Search Console 에 https://xn--zf0b677a35e9vj85a47j.com/sitemap.xml 재제출(재욱님), 네이버 서치어드바이저 수집 요청, GTM 미리보기로 cta_click·inquiry_submit·channeltalk_open 발동 확인, Site Desk 다음 수집본에서 GA4·GSC 정상 확인
-2. www.상품권재테크.com 이 522 → Pages 커스텀 도메인에 www 추가하거나 리다이렉트 규칙(재욱님 확인 후)
+1. GTM 작업공간의 태그 3개 ID 수정(G-34052F1CDF → G-3H052F1CDF)을 재욱님 확인 후 **제출·게시**. 게시 뒤 실사이트 방문 → GA4 실시간 보고서에 사용자 1 이상 뜨는지 확인
+2. 네이버 서치어드바이저 수집 요청(재욱님), GTM 미리보기로 cta_click·inquiry_submit·channeltalk_open 발동 확인, Site Desk 다음 수집본(매일 자동)에서 GA4·GSC 정상 확인. 끝난 것: Search Console sitemap 재제출(2026-11-17), www 커스텀 도메인 추가(응답 200)
 3. 운영 D1 문의 확인 방법: `npx wrangler d1 execute DB --remote --command "SELECT * FROM inquiries ORDER BY id DESC LIMIT 20"` (알림 미구현). 월 1회 보유 기간 지난 행 정리
 4. 이후 변경은 새 작업 브랜치 → main 병합 → 자동 배포. main push = 실배포이므로 항상 재욱님 확인 후
 5. moneyplan-site 저장소·Pages 프로젝트(스테이징)는 필요 없으면 삭제
+
+## 2026-11-17 밤 — 출시 후 등록 점검
+- Site Desk(26.10.19 GA4) 읽기 전용 확인: origin/main a93c5ab, 마지막 collect 실행(2026-11-16) 성공(수집·보호 Pages 배포 단계 모두 success). config/sites.json 에 머니플랜이 이미 등록(id xn--zf0b677a35e9vj85a47j-com, GA4 속성 533182408 / G-3H052F1CDF, GSC https://xn--zf0b677a35e9vj85a47j.com/). 상위 폴더 site-desk 시범본은 건드리지 않음.
+- Cloudflare Pages gift260415-1 에 www.xn--zf0b677a35e9vj85a47j.com 커스텀 도메인 추가(기존 A 레코드 220.90.209.174 → CNAME). https://www.xn--zf0b677a35e9vj85a47j.com/ 200 확인.
+- Search Console: 속성 존재, sitemap.xml 재제출(제출일 2026-11-17 표시).
+- GA4: 속성 533182408 웹 스트림 14378159633 의 측정 ID 는 G-3H052F1CDF. 실사이트는 GTM 을 통해 G-34052F1CDF 로 수집 요청을 보내고 있었고, 이 ID 는 계정 내 어느 속성에도 없음(검색 0건) → 4월 GTM 설정의 오타로 판단. 속성은 '아직 데이터 없음' 상태.
+- GTM-K52V6QRJ 작업공간에서 GA4 - Configuration(Google 태그)·GA4 - qualify_lead·GA4 - close_convert_lead 의 ID 를 G-3H052F1CDF 로 수정·저장. 저장 중 GTM 이 자동 추가한 Google Analytics 태그 1개와 설정 2개는 범위 밖이라 취소해 대기 변경은 태그 3개 수정만 남김. 게시는 재욱님 확인 대기.
